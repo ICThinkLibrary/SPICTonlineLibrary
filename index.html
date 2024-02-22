@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<title>OnlineLibrary</title>
+</head>
+<body class="loginpagebody">
+<div class="wrapper">
+	<form action="">
+		<center>
+			<img src="images/logo.png" class="logo">
+		</center>
+		<h2>Welcome To</h2> <h1><br>ICThink ONLINE LIBRARY</h1>
+		<div class="inputbox">
+			<input id="username" type="text" placeholder="username" required>
+			<i class='bx bxs-user-pin'></i>
+		</div>
+				<div class="inputbox">
+			<input id="password" type="password" placeholder="password" required>
+			<i class='bx bxs-lock-alt'></i>
+		</div>
+		<div class="remember-forgot">
+			<label><input type="checkbox" onclick="myFunction()" >show password</label>
+			<button type="button" class="btn" onclick="login()">Login</button>
+			<a href="#" onclick="alrt()">forgot password</a>
+		</div>
+		
+	</form>
+</div>
+
+
+
+
+<script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+     
+      if (username === 'GRADE 7' && password === 'Gr4D3_7aiPSSWRD') {
+        window.location.href = 'Aweb.html';
+        
+      }
+      else if(username === 'GRADE 8' && password === 'gr4d3_8wkltPSSWRD'){
+        window.location.href = 'Aweb8.html';
+      }
+      else if(username === 'GRADE 9' && password === 'Gr4d3_9cnvPSSWRD'){
+        window.location.href = 'Aweb9.html';
+      }  
+      else {
+      	alert('Invalid Username or Password. Please try again.')
+      }
+  }
+function alrt() {
+	alert('Please ask the Admin for Password.');
+
+}
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</body>
+</html>
